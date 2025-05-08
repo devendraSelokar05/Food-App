@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './tags.module.css';
-
+const API_URL = process.env.REACT_APP_API_BASE_URL;
 export default function Tags({ tags, forFoodPage }) {
   return (
     <div
@@ -11,7 +11,7 @@ export default function Tags({ tags, forFoodPage }) {
       }}
     >
       {tags.map(tag => (
-        <Link key={tag.name} to={`/tag/${tag.name}`}>
+        <Link key={tag.name} to={`${API_URL}/tag/${tag.name}`}>
           {tag.name}
           {!forFoodPage && `(${tag.count})`}
         </Link>
