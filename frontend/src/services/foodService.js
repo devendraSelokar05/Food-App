@@ -1,12 +1,9 @@
 import axios from 'axios';
 
 const API_URL = process.env.REACT_APP_API_BASE_URL;
-console.log("Full process.env:", process.env);
+
 console.log("ENV: REACT_APP_API_BASE_URL =", API_URL);
 
-if (!API_URL) {
-  console.error("API_URL is undefined. Check your .env file and make sure there are no spaces after the '='");
-}
 
 
 export const getAll = async () => {
