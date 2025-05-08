@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin:"*"
+    origin:["https://food-app-664c.vercel.app/"],
   })
 );
 
