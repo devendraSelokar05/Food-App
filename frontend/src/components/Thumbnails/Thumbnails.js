@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import Price from '../Price/Price';
 import StarRating from '../StarRating/StarRating';
 import classes from './thumbnails.module.css';
+const API_URL = process.env.REACT_APP_API_BASE_URL;
 export default function Thumbnails({ foods }) {
   return (
     <ul className={classes.list}>
       {foods.map(food => (
         <li key={food.id}>
-          <Link to={`/food/${food.id}`}>
+          <Link to={`${API_URL}/food/${food.id}`}>
             <img
               className={classes.image}
               src={`${food.imageUrl}`}
