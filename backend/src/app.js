@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: ["https://food-app-lake-nu.vercel.app/"],
+    origin: ["https://food-app-664c.vercel.app/"],
   })
 );
 
