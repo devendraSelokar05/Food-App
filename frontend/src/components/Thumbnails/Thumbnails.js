@@ -4,7 +4,11 @@ import Price from '../Price/Price';
 import StarRating from '../StarRating/StarRating';
 import classes from './thumbnails.module.css';
 const API_URL = process.env.REACT_APP_API_BASE_URL;
-export default function Thumbnails({ foods }) {
+export default function Thumbnails({ foods = [] }) {
+  if (!Array.isArray(foods)) {
+    console.error("Expected 'foods' to be an array, but got:", foods);
+    return null;
+  }
   return (
     <ul className={classes.list}>
       {foods.map(food => (
